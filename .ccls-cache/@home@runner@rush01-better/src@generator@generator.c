@@ -14,7 +14,7 @@ static bool is_valid_col(t_map *map, size_t row, size_t col, int value)
 	i = 0;
 	while (i < row)
 	{
-		if (map_at(map, i, col) == value)
+		if (map_get_at(map, i, col) == value)
 			return (false);
 		i++;
 	}
@@ -36,7 +36,7 @@ static int generate_building(t_map *map, size_t index)
 	i = 0;
 	while (i < map->size)
 	{
-		if (map_at(map, row, (base_col + i) % map->size) != 0)
+		if (map_get_at(map, row, (base_col + i) % map->size) != 0)
 		{
 			i++;
 			continue ;

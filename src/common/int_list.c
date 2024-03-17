@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 
 #include "common.h"
@@ -59,7 +60,7 @@ static int extract_num(char *s, t_int_list **list)
 	int		num;
 
 	start = s;
-	while (*s != ' ' && *s != '\n')
+	while (*s && *s != ' ' && *s != '\n')
 	{
 		if (*s < '0' || *s > '9')
 			return (-1);

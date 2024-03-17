@@ -30,7 +30,7 @@ t_map		*map_create(size_t size);
 void		map_destroy(t_map *map);
 int			map_set_constraints(t_map *map, int *constraints);
 int			map_set_buildings(t_map *map, int *buildings);
-int			map_at(t_map *map, size_t row, size_t col);
+int			map_get_at(t_map *map, size_t row, size_t col);
 void		map_set_at(t_map *map, size_t row, size_t col, int value);
 
 // Map visible
@@ -45,5 +45,6 @@ void		map_print_constraints(t_map *map);
 void		map_print_constraints_long(t_map *map);
 // Utils
 size_t		int_arr_len(int *arr);
+char		*stdin_to_str(void);
 
 #endif

@@ -57,7 +57,7 @@ void map_destroy(t_map *map)
 	free(map);
 }
 
-int map_at(t_map *map, size_t row, size_t col)
+int map_get_at(t_map *map, size_t row, size_t col)
 {
 	if (row >= map->size || col >= map->size)
 		return (-1);
